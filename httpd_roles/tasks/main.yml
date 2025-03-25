@@ -1,0 +1,20 @@
+---
+# tasks file for httpd_roles
+#
+#
+
+    - name: Ensure apache is at the latest version
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+
+    - name: start apache
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Write copy index.html
+      ansible.builtin.copy:
+        content: "<h1> hello Deepika! this page is deployed using Ansible ROLE  </h1>"
+        dest: /var/www/html/index.html
