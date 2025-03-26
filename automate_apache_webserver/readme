@@ -1,0 +1,15 @@
+1. Automate Apache Installation & Configuration
+📌 objective : Used Ansible to install and configure an Apache web server.
+
+1 Created an Ansible playbook to install Apache (httpd).
+
+2 Started and enable the service.
+
+3 Deployed a custom index.html to /var/www/html/.
+
+4 Tested by accessing the web page.
+
+
+
+
+

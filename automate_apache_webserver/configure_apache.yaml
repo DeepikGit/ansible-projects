@@ -1,0 +1,21 @@
+---
+- hosts :
+  user : 
+  become : true
+  tasks: 
+    - name: install apache (yum install httpd)
+      yum:
+        state: present
+        name: httpd
+    
+    - name: service start (service httpd start)
+      service:
+        state: started
+        enabled: true
+        name: httpd
+    
+    - name: copy index ( copy index.html /var/www/html)
+      copy:
+        src: index.html
+        dest: /var/www/html/
+        
