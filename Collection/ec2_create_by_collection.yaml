@@ -1,0 +1,17 @@
+--- 
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: start an instance with a public IP address using ansible-collection
+    amazon.aws.ec2_instance:
+      name: "ansible-collection"
+      instance_type: t2.micro
+      security_group: default
+      region: ap-southeast-1
+      aws_access_key: "{{aws_access_key}}"  # From vault as defined
+      aws_secret_key: "{{aws_secret_key}}"  # From vault as defined      
+      network:
+        assign_public_ip: true
+      image_id: ami-0b5a4445ada4a59b1
+      tags:
+        Environment: production
