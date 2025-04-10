@@ -1,0 +1,8 @@
+- name: Deploy Secure App
+  hosts: web
+  become: true
+  vars_files:
+    - group_vars/all.yml
+  roles:
+    - app_deploy
+```

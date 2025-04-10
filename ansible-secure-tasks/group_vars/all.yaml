@@ -1,0 +1,7 @@
+db_user: admin
+db_pass: MyEncryptedPass123
+aws_access_key: AKIA...ENCRYPTED
+aws_secret_key: SECRET...ENCRYPTED
+
+
+# ansible-vault encrypt group_vars/all.yml

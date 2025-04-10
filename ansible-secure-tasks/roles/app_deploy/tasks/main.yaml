@@ -1,0 +1,5 @@
+- name: Create app config from template
+  template:
+    src: config.j2
+    dest: /etc/myapp/config.ini
+  notify: restart app
